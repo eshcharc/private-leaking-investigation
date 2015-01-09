@@ -17,15 +17,23 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
+
+  .directive({
+    timeBomb: timeBombDirective,
+    alCapone: ['$window', alCaponeDirective]
+  })
+
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/directives/plugin', {
+        templateUrl: 'views/plugin.html'
+      })
+      .when('/directives/dom-tree-reference', {
+        templateUrl: 'views/dom-tree-reference.html'
       })
       .otherwise({
         redirectTo: '/'
