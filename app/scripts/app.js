@@ -21,7 +21,8 @@ angular
   .directive({
     timeBomb: timeBombDirective,
     alCapone: ['$window', alCaponeDirective],
-    tedBundy: ['$interval', tedBundyDirective]
+    tedBundy: ['$interval', tedBundyDirective],
+    leeHarveyOswald: leeHarveyOswaldDirective
   })
 
   .config(function ($routeProvider) {
@@ -38,6 +39,9 @@ angular
       })
       .when('/directives/interval', {
         templateUrl: 'views/interval.html'
+      })
+      .when('/directives/jquery-remove', {
+        templateUrl: 'views/jquery-remove.html'
       })
       .otherwise({
         redirectTo: '/'
