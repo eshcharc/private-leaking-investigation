@@ -14,7 +14,6 @@ function alCaponeDirective ($window) {
 	    	scope.$on('$destroy', function findCaponeTreasure() {
 	            //$window.alCaponeTreasure = null;
 	        });
-	    },
-	    template: '<div>Al capone treasure</div></div><br/>'
+	    }
 	};
 }

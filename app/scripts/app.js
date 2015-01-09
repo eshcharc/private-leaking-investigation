@@ -20,7 +20,8 @@ angular
 
   .directive({
     timeBomb: timeBombDirective,
-    alCapone: ['$window', alCaponeDirective]
+    alCapone: ['$window', alCaponeDirective],
+    tedBundy: ['$interval', tedBundyDirective]
   })
 
   .config(function ($routeProvider) {
@@ -34,6 +35,9 @@ angular
       })
       .when('/directives/dom-tree-reference', {
         templateUrl: 'views/dom-tree-reference.html'
+      })
+      .when('/directives/interval', {
+        templateUrl: 'views/interval.html'
       })
       .otherwise({
         redirectTo: '/'
