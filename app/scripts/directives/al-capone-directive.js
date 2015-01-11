@@ -2,18 +2,26 @@
 
 function alCaponeDirective ($window) {
 	return {
-	    link: function (scope, element, attrs) {
-	    	console.log($window.alCaponeTreasure)
-	    	if(!$window.alCaponeTreasure) {
-	    		$window.alCaponeTreasure = [];
-	    	}
+	    link: function alCaponeLink(scope, element, attrs) {
+			if(!$window.alCaponeTreasure) {
+				$window.alCaponeTreasure = [];
+			}
 
-	    	$window.alCaponeTreasure.push($window.document.createElement('div'));
-	    	$window.alCaponeTreasure.push($window.document.createElement('div'));
+			(function perform100Robberies() {
+				var tree = $window.document.createElement('div'),
+					div,
+					i;
 
-	    	scope.$on('$destroy', function findCaponeTreasure() {
-	            //$window.alCaponeTreasure = null;
-	        });
-	    }
+				for(i = 0; i < 1000; i+=1) {
+					div = $window.document.createElement('div');
+					tree.appendChild(div);
+				}
+				$window.alCaponeTreasure.push(div);
+			})();
+
+			scope.$on('$destroy', function findCaponeTreasure() {
+		    	//$window.alCaponeTreasure = null;
+		  	});
+		}
 	};
 }
