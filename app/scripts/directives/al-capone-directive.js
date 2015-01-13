@@ -12,7 +12,7 @@ function alCaponeDirective ($window) {
 					div,
 					i;
 
-				for(i = 0; i < 1000; i+=1) {
+				for(i = 0; i < 100000; i+=1) {
 					div = $window.document.createElement('div');
 					tree.appendChild(div);
 				}
