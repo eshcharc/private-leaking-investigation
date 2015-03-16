@@ -7,15 +7,14 @@ function tedBundyDirective ($interval) {
 
     return {
     	link: function tedBundyLink(scope, element, attrs) {
-    		var bodies = [];
+    		var bodies = [],
+    			killingInterval = $interval(function kill() {
+		    		bodies.push(new Body());
+				}, 50);
 
-	    	var killingInterval = $interval(function kill() {
-	    		bodies.push(new Body());
-			}, 50);
-
-	    	scope.$on('$destroy', function arrestTedBundy() {
+	    	// scope.$on('$destroy', function arrestTedBundy() {
 	    		//$interval.cancel(killingInterval);
-	    	});
+	    	// });
 	    }
 	};
 }

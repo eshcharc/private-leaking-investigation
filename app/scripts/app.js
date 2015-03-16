@@ -3,7 +3,6 @@
 /* global timeBombDirective */
 /* global alCaponeDirective */
 /* global tedBundyDirective */
-/* global leeHarveyOswaldDirective */
 
 /**
  * @ngdoc overview
@@ -26,8 +25,7 @@ angular
   .directive({
     timeBomb: timeBombDirective,
     alCapone: ['$window', alCaponeDirective],
-    tedBundy: ['$interval', tedBundyDirective],
-    leeHarveyOswald: leeHarveyOswaldDirective
+    tedBundy: ['$interval', tedBundyDirective]
   })
 
   .config(function ($routeProvider) {
@@ -44,9 +42,6 @@ angular
       })
       .when('/directives/interval', {
         templateUrl: 'views/interval.html'
-      })
-      .when('/directives/jquery-remove', {
-        templateUrl: 'views/jquery-remove.html'
       })
       .otherwise({
         redirectTo: '/'
