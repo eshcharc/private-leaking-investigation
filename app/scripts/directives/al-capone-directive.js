@@ -19,9 +19,9 @@ function alCaponeDirective ($window) {
 				$window.alCaponeTreasure.push(div);
 			})();
 
-			scope.$on('$destroy', function findCaponeTreasure() {
+			// scope.$on('$destroy', function findCaponeTreasure() {
 		    	//$window.alCaponeTreasure = null;
-		  	});
+		  	// });
 		}
 	};
 }

@@ -1,3 +1,5 @@
+'use strict';
+
 function tedBundyDirective ($interval) {
 	var Body = function () { 
 		// define person 
@@ -13,7 +15,7 @@ function tedBundyDirective ($interval) {
 
 	    	scope.$on('$destroy', function arrestTedBundy() {
 	    		//$interval.cancel(killingInterval);
-	    	})
+	    	});
 	    }
 	};
 }

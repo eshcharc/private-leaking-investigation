@@ -1,5 +1,10 @@
 'use strict';
 
+/* global timeBombDirective */
+/* global alCaponeDirective */
+/* global tedBundyDirective */
+/* global leeHarveyOswaldDirective */
+
 /**
  * @ngdoc overview
  * @name privateLeakingInvestigationApp

@@ -13,6 +13,6 @@ function leeHarveyOswaldDirective () {
     	scope.$on('$destroy', function arrestLeeHarvey() {
     		element[0].removeChild(bullet[0]);
     		//bullet.remove();
-    	})
+    	});
     };
 }
